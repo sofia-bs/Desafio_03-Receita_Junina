@@ -19,12 +19,12 @@
             <h3>Prato típico com milho verde ralado</h3>
             <div class="quantities">
                 <p class="portions">Porções</p>
-                <button class="decrease">
+                <button class="decrease" onclick="updatePortions(-1)">
                     <img src="img/-.png" alt="Botão de menos">
                 </button>
-                <p class="number_of_servings">01</p>
-                <button class="add">
-                    <img src="img/+.png" alt="Botão de mais">
+                <p class="number_of_servings" id="number_of_servings">01</p>
+                <button class="add" onclick="updatePortions(1)">
+                    <img src="img/+.png" alt="Botão de mais">   
                 </button>
             </div>
         </div>
@@ -36,7 +36,7 @@
                 <img src="img/cesta_compras.png" alt="Cesta de compras" class="cesta_compras">
                 <h2 class="title_text">Ingredientes</h2>
             </div>
-            <ul class="list">
+            <ul class="list" id="ingredient-list">
                 <li><span class="qnt">1</span> espiga de milho verde</li>
                 <li><span class="qnt">1</span> colher de sopa de açúcar</li>
                 <li><span class="qnt">1</span> colher de sopa de manteiga</li>

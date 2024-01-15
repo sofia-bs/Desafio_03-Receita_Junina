@@ -11,12 +11,10 @@
     box-sizing: border-box;
 }
 
-html {
+html, .body {
     width: 100%;
     height: 100%;
 }
-
-body
 
 .container1 {
     background-color: var(--beige);
@@ -124,8 +122,9 @@ h3 {
     height: 35px;
     margin-top: 30px;
     margin-left: 20px;
-    gap: 5px;
+    gap: 11px;
     font-weight: 500;
+    align-items: center;
 }
 
 .title_text {
@@ -148,7 +147,7 @@ h3 {
     height: 32px;
 }
 
-.list{
+.list {
     color: #FFF;
     leading-trim: both;
     text-edge: cap;
@@ -158,4 +157,57 @@ h3 {
     font-weight: 400;
     line-height: normal;
     align-items: flex-start;
+    margin-left: 52px;
 }
+
+.error {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    background-color: rgba(255, 0, 0, 0.263);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 0, 0, 0.288);
+    width: 250px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+@media (max-width: 900px) {
+    .container1 {
+      width: 100%;
+      min-width: 100vw;
+      min-height: 90vh;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      padding: 0;
+      gap: 0;
+    }
+  
+    .container1, .text, .quantities {
+      justify-content: center;
+    }
+  
+    .container2 {
+      display: flex;
+      flex-direction: column;
+      max-height: 100vh;
+      height: 100%;
+      gap: 3rem;
+      padding: 5rem 2rem;
+    }
+  
+    .container2, .ingredients {
+      height: 100%;
+      gap: 2rem;
+    }
+  
+    .container2, .title {
+      justify-content: center;
+    }
+  }
